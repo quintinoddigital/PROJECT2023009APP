@@ -1,11 +1,37 @@
+ion-header {
+    ion-toolbar {
+        ion-buttons {
+            ion-button {
+                span {
+                    border-radius: 50%;
+                    width: 14px;
+                    height: 14px;
+                    background: red;
+                    position: absolute;
+                    top: 6%;
+                    right: -26%;
+                    font-size: 10px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                ion-icon {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
 ion-content {
     #section1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--ion-color-medium-contrast);
+        color: var(--ion-color-medium-contrast); 
         .card {
-            background: var(--ion-color-light);
+            background: var(--ion-color-primary-contrast);
             border-radius: 10px;
             width: 94%;
             padding: 1.4rem;
@@ -21,6 +47,7 @@ ion-content {
                         p {
                             margin-top: 1rem;
                             font-size: 2rem;
+                            color: var(--ion-color-success-contrast);
                         }
                     }
                 }
@@ -38,6 +65,107 @@ ion-content {
                             }
                         }
                     }
+                }
+            }
+            section {
+                margin-top: 18px;
+                border: var(--ion-color-light) 0.4px solid;
+                background: var(--ion-color-light);
+            }
+            .options {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 60px;
+                margin-left: 60px;
+                ion-icon {
+                    font-size: 25px;
+                }
+                .saque_, .enviar_ {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 9px;
+                    span {
+                        margin-top: 8px;
+                        font-weight: bold;
+                    }
+                }
+                .saque {
+                    background: #FF396F;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 70px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .enviar { 
+                    background: #6236FF;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 70px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .demonstrativo {
+        background: #ededf5;
+        color: dark;
+        height: 300px;
+        margin-top: -16vh;
+    }
+    .totalizador1 {
+        // border: red dashed 2px;
+        width: 94%;
+        margin-left: 3%;
+        margin-top: -29vh;
+        color: black;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .receita, .despesa {
+            background: white;
+            border-radius: 20px;
+            padding: 15px;
+            width: 200px;
+        }
+        .receita {
+            ion-label {
+                h3 {
+                    color: #9b94a3;
+                    font-weight: bold;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    color: #1dcc70;
+                }
+            }
+        }
+        .despesa {
+            margin-left: 10px;
+            ion-label {
+                h3 {
+                    color: #9b94a3;
+                    font-weight: bold;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    color: #ff3a70;
                 }
             }
         }

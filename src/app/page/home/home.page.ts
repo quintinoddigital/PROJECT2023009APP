@@ -31,6 +31,22 @@ export class HomePage implements OnInit {
     this.presentModalIncome();
   }
 
+  public async openNotification() {
+    this.presentToastDanger("Funcionalidade não implementada!");
+  }
+
+  public async openPerfil() {
+    this.presentToastDanger("Funcionalidade não implementada!");
+  }
+
+  public async openWithdrawMoney() {
+    this.presentToastDanger("Funcionalidade não implementada!");
+  }
+
+  public async openSendMoney() {
+    this.presentToastDanger("Funcionalidade não implementada!");
+  }
+
   private async presentToastDanger(mensagem: string) {
     const toast = await this.toastController.create({
       message: mensagem.toString(),
