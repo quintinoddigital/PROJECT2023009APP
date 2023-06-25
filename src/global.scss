@@ -29,9 +29,14 @@
     src: url(./assets/font/Mukta/Mukta-Regular.ttf);
 }
 
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(./assets/font/Montserrat/static/Montserrat-Regular.ttf);
+}
+
 * {
     margin: 0;
-    font-family: Mukta-Regular;
+    font-family: Montserrat-Regular;
 }
 
 .title {
