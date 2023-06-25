@@ -1,0 +1,45 @@
+ion-content {
+    #section1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--ion-color-medium-contrast);
+        .card {
+            background: var(--ion-color-light);
+            border-radius: 10px;
+            width: 94%;
+            padding: 1.4rem;
+            .value {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .total-balance {
+                    ion-label {
+                        h3 {
+                            font-size: 1rem;
+                        }
+                        p {
+                            margin-top: 1rem;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                .buttons-income-expense {
+                    ion-buttons {
+                        display: flex;
+                        flex-direction: column;
+                        ion-button {
+                            background: var(--app-color-background-button);
+                            border-radius: 10px;
+                            margin: 2px;
+                            ion-icon {
+                                // border: red dashed 2px;
+                                font-size: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

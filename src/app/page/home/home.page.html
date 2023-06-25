@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar color="primary">
+
+    <ion-button slot="start" fill="clear" color="light">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-button>
+
+    <ion-title></ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button fill="clear" color="light">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+  
+      <ion-button fill="clear" color="light">
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content color="primary">
+
+  <div id="section1">
+
+    <div class="card">
+
+      <div class="value">
+
+        <div class="total-balance">
+          <ion-label>
+            <h3><b>Total Balance</b></h3>
+            <p><b>R$ {{ valorTotalDespesa | number:'1.2' }}</b></p>
+          </ion-label>
+        </div>
+
+        <div class="buttons-income-expense">
+          <ion-buttons>
+            <ion-button (click)="openModalIncome()">
+              <ion-icon name="trending-up-outline" slot="icon-only" color="success" size="large"></ion-icon>
+            </ion-button>
+            <ion-button (click)="openModalExpense()">
+              <ion-icon name="trending-down-outline" slot="icon-only" color="danger" size="large"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+
+      </div>
+
+      <div class="options">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
