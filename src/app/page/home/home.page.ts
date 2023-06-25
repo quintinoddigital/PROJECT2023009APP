@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
 import { ModalExpenseCreatePage } from 'src/app/component/modal-expense-create/modal-expense-create.page';
+import { ModalIncomeCreatePage } from 'src/app/component/modal-income-create/modal-income-create.page';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +28,7 @@ export class HomePage implements OnInit {
   }
 
   public async openModalIncome() {
-    this.presentToastDanger("Funcionalidade Não Implementada!");
+    this.presentModalIncome();
   }
 
   private async presentToastDanger(mensagem: string) {
@@ -48,16 +49,19 @@ export class HomePage implements OnInit {
       initialBreakpoint: 0.70,
     });
     modal.onDidDismiss().then((saldo) => {
-      this.valorTotalDespesa += Number(saldo.data);
+      this.valorTotalDespesa -= Number(saldo.data);
     });
     return await modal.present();
   }
 
   private async presentModalIncome() {
     const modal = await this.modalController.create({
-      component: "",
+      component: ModalIncomeCreatePage,
       breakpoints: [0, 0.25, 0.60, 1],
       initialBreakpoint: 0.60
+    });
+    modal.onDidDismiss().then((saldo) => {
+      this.valorTotalDespesa += Number(saldo.data);
     });
     return await modal.present();
   }

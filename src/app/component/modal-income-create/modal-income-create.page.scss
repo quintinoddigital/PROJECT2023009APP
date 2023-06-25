@@ -1,0 +1,35 @@
+ion-header {
+    ion-toolbar {
+        ion-title {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+}
+
+ion-content {
+    form {
+        ion-list {
+            ion-item {
+
+            }
+            span {
+                display: flex;
+                justify-content: center;
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: red;
+                margin-top: 10px;
+            }
+        }
+    }
+    ion-button {
+        width: 94%;
+        margin: auto;
+        text-transform: initial;
+        height: 8vh;
+        margin-top: 4vh;
+    }
+}

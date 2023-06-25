@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AlertController, ModalController } from '@ionic/angular';
-import { BehaviorSubject } from 'rxjs';
 import { ModalFavorecidoSearchPage } from '../modal-favorecido-search/modal-favorecido-search.page';
 
 @Component({
