@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { AlertController, ModalController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertController, IonInput, ModalController } from '@ionic/angular';
 import { ModalFavorecidoSearchPage } from '../modal-favorecido-search/modal-favorecido-search.page';
 
 @Component({
@@ -10,6 +10,9 @@ import { ModalFavorecidoSearchPage } from '../modal-favorecido-search/modal-favo
 })
 export class ModalIncomeCreatePage implements OnInit {
 
+  @ViewChild("input")
+  public input: IonInput;
+
   public formGroup = new FormGroup({
     name: new FormControl("", Validators.required),
     value: new FormControl("", Validators.required),
@@ -17,12 +20,14 @@ export class ModalIncomeCreatePage implements OnInit {
   });
 
   constructor(
-    private formBuilder: FormBuilder,
     private alertController: AlertController,
     private modalController: ModalController
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.input.setFocus();
+    console.log(this.input);   
+  }
 
   public async createIncome() {
     if (this.formGroup.invalid) {

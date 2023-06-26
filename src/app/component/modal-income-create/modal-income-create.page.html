@@ -12,7 +12,7 @@
 
       <ion-item>
         <ion-label position="floating">Favorecido</ion-label>
-        <ion-input type="text" formControlName="name" (click)="onPresentModalFavorecidoSearch()" placeholder="Favorecido" autofocus="true"></ion-input>
+        <ion-input type="text" #input formControlName="name" (click)="onPresentModalFavorecidoSearch()" placeholder="Favorecido" autofocus="true"></ion-input>
       </ion-item>
 
       <span *ngIf="formGroup.get('name').hasError('required')">Field Favorecido not be empty!</span>

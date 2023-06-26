@@ -30,13 +30,23 @@
 }
 
 @font-face {
+    font-family: Belanosima-Regular;
+    src: url(./assets/font/Belanosima/Belanosima-Regular.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Regular;
+    src: url(./assets/font/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
     font-family: Montserrat-Regular;
     src: url(./assets/font/Montserrat/static/Montserrat-Regular.ttf);
 }
 
 * {
     margin: 0;
-    font-family: Montserrat-Regular;
+    font-family: TitilliumWeb-Regular;
 }
 
 .title {
