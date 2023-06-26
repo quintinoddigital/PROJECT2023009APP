@@ -60,7 +60,6 @@ ion-content {
                             border-radius: 10px;
                             margin: 2px;
                             ion-icon {
-                                // border: red dashed 2px;
                                 font-size: 200px;
                             }
                         }
@@ -125,9 +124,10 @@ ion-content {
         margin-top: -16vh;
     }
     .totalizador1 {
+        // border: red dashed 2px;
         width: 94%;
         margin-left: 3%;
-        margin-top: -29vh;
+        margin-top: -28vh;
         color: black;
         font-weight: bold;
         display: flex;
