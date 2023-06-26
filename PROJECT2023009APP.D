@@ -4,7 +4,7 @@
 
         :sparkles: feature: <> -- Código
 
-        :lipstick: feature: <> -- Prototipo
+        :lipstick: feature: Monitoramento Financeiro -- Prototipo
 
         :wrench: chore: <> -- Configuração
 

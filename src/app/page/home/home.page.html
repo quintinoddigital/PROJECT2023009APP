@@ -38,7 +38,7 @@
         <div class="total-balance">
           <ion-label>
             <h3><b>Saldo Total</b></h3>
-            <p><b>{{ valorTotalDespesa | currency:'BRL' }}</b></p>
+            <p><b [ngClass]="valorTotalDespesa <0 ? 'valor-negativo' : ''">{{ valorTotalDespesa | currency:'BRL' }}</b></p>
           </ion-label>
         </div>
 
