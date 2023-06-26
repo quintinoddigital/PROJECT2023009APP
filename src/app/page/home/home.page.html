@@ -38,7 +38,7 @@
         <div class="total-balance">
           <ion-label>
             <h3><b>Saldo Total</b></h3>
-            <p><b>R$ {{ valorTotalDespesa | number:'1.2' }}</b></p>
+            <p><b>{{ valorTotalDespesa | currency:'BRL' }}</b></p>
           </ion-label>
         </div>
 
@@ -131,7 +131,7 @@
       <div class="transacoes-card">
 
         <div class="imagem">
-          <ion-img src="../../../assets/imagem/1.jpg"></ion-img>
+          <ion-img src="../../../assets/imagem/1.jpg" class="border"></ion-img>
         </div>
 
         <div class="favorecido">

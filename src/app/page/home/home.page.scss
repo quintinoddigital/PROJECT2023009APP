@@ -77,8 +77,8 @@ ion-content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-right: 60px;
-                margin-left: 60px;
+                margin-right: 40px;
+                margin-left: 40px;
                 ion-icon {
                     font-size: 25px;
                 }
@@ -252,12 +252,13 @@ ion-content {
                 .imagem {
                     width: 40px;
                     height: 40px;
-                    ion-img {
-                        border-radius: 20px;
+                    border-radius: 20px;
+                    .border {
+
                     }
                 }
                 .favorecido {
-                    margin-left: -18vh;
+                    margin-left: -8vh;
                     h3 {
                         font-weight: bold;
                     }
