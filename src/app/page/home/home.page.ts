@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConnectionStatus, Network } from '@capacitor/network';
 import { ModalController, ToastController } from '@ionic/angular';
 import { ModalExpenseCreatePage } from 'src/app/component/modal-expense-create/modal-expense-create.page';
 import { ModalIncomeCreatePage } from 'src/app/component/modal-income-create/modal-income-create.page';
@@ -16,12 +17,30 @@ export class HomePage implements OnInit {
 
   public valorSaldoTotal: any = this.valorTotalReceita - this.valorTotalDespesa;
 
+  public isConectado: boolean = false;
+
+  public connectionStatus: ConnectionStatus;
+
   constructor(
     private toastController: ToastController,
     private modalController: ModalController
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.verificarConexao();
+  }
+
+  public verificarConexao() {
+    if (Network) {
+      Network.getStatus().then( (response) => {
+        this.connectionStatus = response;
+      });
+    }
+    Network.addListener("networkStatusChange", status => {
+      this.connectionStatus = status;
+      this.isConectado = this.connectionStatus.connected;
+    });
+  }
 
   public async openModalExpense() {
     this.presentModalExpense();

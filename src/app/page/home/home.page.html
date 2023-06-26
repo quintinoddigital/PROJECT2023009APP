@@ -1,5 +1,9 @@
 <ion-header class="ion-no-border">
 
+  <div *ngIf="isConectado" class="verificar-conexao">
+    <ion-label>Aplicativo operando em modo <i>Offline</i>!</ion-label>
+  </div>
+
   <ion-toolbar color="primary">
 
     <ion-button slot="start" fill="clear" color="light">
