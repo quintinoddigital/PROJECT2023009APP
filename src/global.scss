@@ -58,3 +58,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.modal-income-create,
+.modal-wrapper {
+    transition: 8s;
+    position: absolute;
+}

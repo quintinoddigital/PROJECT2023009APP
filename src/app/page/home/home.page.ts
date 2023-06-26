@@ -74,7 +74,8 @@ export class HomePage implements OnInit {
     const modal = await this.modalController.create({
       component: ModalIncomeCreatePage,
       breakpoints: [0, 0.25, 0.60, 1],
-      initialBreakpoint: 0.60
+      initialBreakpoint: 0.60,
+      cssClass: "modal-income-create",
     });
     modal.onDidDismiss().then((saldo) => {
       this.valorTotalDespesa += Number(saldo.data);

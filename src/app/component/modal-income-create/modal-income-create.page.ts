@@ -25,8 +25,7 @@ export class ModalIncomeCreatePage implements OnInit {
   ) { }
 
   ngOnInit() { 
-    this.input.setFocus();
-    console.log(this.input);   
+    this.input.setFocus(); 
   }
 
   public async createIncome() {
