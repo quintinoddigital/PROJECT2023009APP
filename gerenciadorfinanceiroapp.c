@@ -21,4 +21,8 @@
 
     -- Funcionalidade
 
-        :sparkles: feature: Verificar conexão com a Internet
+        [OK] :sparkles: feature: Verificar conexão com a Internet
+
+        [--] :sparkles: feature: Integrar com API (Gerenciador Financeiro API)
+
+        [--] :sparkles: feature: Validar dados ao cadastrar Receitas e Despesas

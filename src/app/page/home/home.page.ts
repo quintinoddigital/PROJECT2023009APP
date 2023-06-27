@@ -23,10 +23,10 @@ export class HomePage implements OnInit {
 
   constructor(
     private toastController: ToastController,
-    private modalController: ModalController
+    private modalController: ModalController,
   ) { }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.verificarConexao();
   }
 
@@ -84,7 +84,11 @@ export class HomePage implements OnInit {
       initialBreakpoint: 0.70,
     });
     modal.onDidDismiss().then((saldo) => {
-      this.valorTotalDespesa -= Number(saldo.data);
+      if (saldo.role !== 'backdrop') {
+        this.valorTotalDespesa -= Number(saldo.data);
+      } else {
+        this.valorTotalDespesa += Number(0);
+      }
     });
     return await modal.present();
   }
@@ -92,12 +96,16 @@ export class HomePage implements OnInit {
   private async presentModalIncome() {
     const modal = await this.modalController.create({
       component: ModalIncomeCreatePage,
-      breakpoints: [0, 0.25, 0.60, 1],
-      initialBreakpoint: 0.60,
+      breakpoints: [0, 0.25, 0.70, 1],
+      initialBreakpoint: 0.70,
       cssClass: "modal-income-create",
     });
     modal.onDidDismiss().then((saldo) => {
-      this.valorTotalDespesa += Number(saldo.data);
+      if (saldo.role !== 'backdrop') {
+        this.valorTotalDespesa += Number(saldo.data);
+      } else {
+        this.valorTotalDespesa += Number(0);
+      }
     });
     return await modal.present();
   }

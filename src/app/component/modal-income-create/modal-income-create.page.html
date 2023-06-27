@@ -12,21 +12,21 @@
 
       <ion-item>
         <ion-label position="floating">Favorecido</ion-label>
-        <ion-input type="text" #input formControlName="name" (click)="onPresentModalFavorecidoSearch()" placeholder="Favorecido" autofocus="true"></ion-input>
+        <ion-input type="text" aria-label="name" legacy="true" formControlName="name" (click)="onPresentModalFavorecidoSearch()" placeholder="Favorecido" autofocus="true"></ion-input>
       </ion-item>
 
-      <span *ngIf="formGroup.get('name').hasError('required')">Field Favorecido not be empty!</span>
+      <span *ngIf="formGroup.get('name').hasError('required') && (formGroup.get('name').touched || formGroup.get('name').dirty)">O campo Favorecido deve ser preenchido!</span>
 
       <ion-item>
         <ion-label position="floating">Valor</ion-label>
-        <ion-input formControlName="value" placeholder="R$ 00,00"></ion-input>
+        <ion-input type="number" aria-label="value" legacy="true" formControlName="value" placeholder=""></ion-input>
       </ion-item>
 
-      <span *ngIf="formGroup.get('value').hasError('required')">Field Valor not be empty!</span>
+      <span *ngIf="formGroup.get('value').hasError('required') && (formGroup.get('value').touched || formGroup.get('name').dirty)">O campo Valor deve ser preenchido!</span>
 
       <ion-item>
         <ion-label position="floating">Observação</ion-label>
-        <ion-textarea formControlName="observation" placeholder="Observação"></ion-textarea>
+        <ion-textarea aria-label="observation" legacy="true" formControlName="observation" placeholder=""></ion-textarea>
       </ion-item>
 
     </ion-list>
