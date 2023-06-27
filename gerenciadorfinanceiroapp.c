@@ -17,12 +17,13 @@
     -- Dependencias
 
         npm install @capacitor/network
-        npx capacitor sync
 
     -- Funcionalidade
 
         [OK] :sparkles: feature: Verificar conexão com a Internet
 
+        [OK] :sparkles: feature: Validar dados ao cadastrar Receitas e Despesas
+
         [--] :sparkles: feature: Integrar com API (Gerenciador Financeiro API)
 
-        [--] :sparkles: feature: Validar dados ao cadastrar Receitas e Despesas
+        [--] :sparkles: feature: Realizar testes de Integração em disposítivo real
